@@ -4,11 +4,12 @@
         <meta charset="utf-8">
         <title>Images, Video, Favicons, &amp; Tables</title>
         <!-- TO DO:add your name to the meta author tag -->
-        <meta name="author" content="">
+        <meta name="author" content="Zenaida Santos">
         <meta name="description" content="Practice with images, video, svgs, favicons, and tables for G.I.T. 215">
 
         <!-- A FAVICON -->
         <!-- TO DO: add the favicon here -->
+        <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
 
         <!-- GOOGLE FONTS LINKS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,6 +74,7 @@
                     <p>As explained above, a decorative images is one that if you took it off the page, the user would still be able to use and understand the page fully, because the image isn't adding any information they won't have otherwise. When adding these in your HTML, you indicate that they are decorative by leaving the alt text attribute empty. You can't leave the alt attribute off completely, just blank. Generally though, you'll add decorative images using CSS.</p>
 
                     <!-- TO DO: add the image named square-red-blue to this section below. Be sure to add its height and width -->
+                    <img src="images/square-red-blue.jpg" alt="" width="300" height="300">
 
                     <p class="credit">Photo by <a href="https://unsplash.com/@usgs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">USGS</a> on <a href="https://unsplash.com/wallpapers/cool/abstract?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
                 </section>
@@ -82,6 +84,7 @@
                     <p>For images that are content, and necessary for understanding the page (think products, maps, etc.) you cannot leave the alt text blank, and should use it to describe the image to the best of your ability. These should also use width and height attributes that come from the edited image itself.</p>
 
                     <!-- TO DO: add the memphis recording service to this section below, I used "a neon sign hanging on a dark wall that says memphis recording service" as the alt text for this image it is 400px wide by 400px tall -->
+                    <img src="images/memphis-recording-service.jpg" alt="a neon sign hanging on a dark wall that says memphis recording service" width="400" height="400">
 
                     <p class="credit">Photo by <a href="https://unsplash.com/es/@uconrad?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Uwe Conrad</a> on <a href="https://unsplash.com/photos/zPnHgxeu9LI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
                 </section>
@@ -96,6 +99,9 @@
                     <p>The video that we will embed below is included in the video folder of this project. Your zyBook explains how these tags work in detail, but today we'll write some minimum code to get the video to display on our page. Below, we'll add the video from the video folder in the project. Include the attribute that will display controls for the video, and set the width.</p>
                     
                     <!-- TO DO: Add the video from the files below using HTML5 -->
+                    <video controls width="640" preload="metadata">
+                        <source src="video/video.mp4" type="video/mp4">
+                    </video>
 
                     <a href="https://www.pexels.com/video/laptop-use-as-controller-for-a-modern-sound-system-3134599/" class="credit">Video by Caleb Oquendo</a>
                 </section>
@@ -125,7 +131,7 @@
                 <p>In HTML, tables are used for tabular data. Think of data similar to a schedule or what you might find easier to read in a spreadsheet format. Tables can cause issues on smaller screens, as they aren't responsive, so consider that if you add them to a page. If they will be small enough to fit on the screen, even with their data, you should be fine.</p>
                 <table>
                     <!-- TO DO: Complete the code below to create a caption for this table -->
-                    Hours of Operation
+                    <caption>Hours of Operation</caption>
 
                     <thead>
                         <tr>
@@ -134,41 +140,43 @@
                         </tr>
                     </thead>
 
-                    <tr>
-                        <td>Monday</td>
-                        <td>Noon - 8:00PM</td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Noon - 8:00PM</td>
+                        </tr>
 
-                    <tr>
-                        <td>Tuesday</td>
-                        <td>10:00AM - 7:00PM</td>
-                    </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>10:00AM - 7:00PM</td>
+                        </tr>
 
-                    <tr>
-                        <!-- TO DO: Complete the code below to create a cell that will span all columns -->
-                        <!-- Wednesday - <span class="bold">Closed</span> -->
-                    </tr>
+                        <tr>
+                            <!-- TO DO: Complete the code below to create a cell that will span all columns -->
+                            <td colspan="2">Wednesday - <span class="bold">Closed</span></td>
+                        </tr>
 
-                    <tr>
-                        <td>Thursday</td>
-                        <td>10:00AM - 7:00PM</td>
-                    </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>10:00AM - 7:00PM</td>
+                        </tr>
 
-                    <tr>
-                        <td>Friday</td>
-                        <td>Noon - Midnight</td>
-                    </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>Noon - Midnight</td>
+                        </tr>
 
-                    <tr>
-                        <td>Saturday</td>
-                        <!-- TO DO: Complete the code below to create a cell that will span two rows -->
-                        <td rowspan="2"><span>Closed</span> By Appointment Only</td>
-                    </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <!-- TO DO: Complete the code below to create a cell that will span two rows -->
+                            <td rowspan="2"><span>Closed</span> By Appointment Only</td>
+                        </tr>
 
-                    <tr>
-                        <!-- TO DO: Complete the code below to create a cell containing that text -->
-                        <!-- Sunday -->
-                    </tr>
+                        <tr>
+                            <!-- TO DO: Complete the code below to create a cell containing that text -->
+                            <td>Sunday</td>
+                        </tr>
+                    </tbody>
                 </table>
             </section>
 
@@ -180,6 +188,10 @@
 
                 <a href="#" aria-label="find us on facebook">
                     <!-- TO DO: go to the tabler icons site, search for the icon for Facebook, and copy and paste the SVG code below -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                    </svg>
                 </a>
                 
                 <a href="#" aria-label="find us on instagram">
@@ -192,8 +204,8 @@
                 </a>
 
                 <a href="#" aria-label="find us on twitter">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke="#2c3e50" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" />
                         <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
                     </svg>
                 </a>
